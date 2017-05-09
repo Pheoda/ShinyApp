@@ -13,7 +13,7 @@ shinyUI(fluidPage(
 
     # Affichage du rendu
     mainPanel(
-      
+      textOutput("text")
     )
   )
 ))
