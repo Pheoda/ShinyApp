@@ -14,8 +14,10 @@ shinyServer(function(input, output) {
   output$plot <- renderPlot({
     if(!is.null(input$file1) && !is.null(input$file2))
     {
-      plot(c(as.matrix(read.csv(input$file1$datapath))), main = "Rendu des échantillons", xlab = "X", ylab = "Y",type = "l")
-      plot(c(as.matrix(read.csv(input$file2$datapath))))
+      x <- c(as.matrix(read.csv(input$file1$datapath)));
+      y <- c(as.matrix(read.csv(input$file2$datapath)));
+      plot(x, rank(x)/length(x), main = "Rendu des échantillons", xlab = "X", ylab = "Y",type = "p");
+      points(y, rank(y)/length(y), col="red");
     }
   })
   
