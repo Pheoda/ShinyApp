@@ -7,7 +7,7 @@ shinyServer(function(input, output) {
   ######
   
   output$p_value <- renderText({
-    #Vérification si des fichiers de données on été rentrés
+    #Vérification si des fichiers de données ont été rentrés
     if(!is.null(input$file1) && !is.null(input$file2))
     {
       #Rangement des valeurs dans des tableaux
@@ -20,7 +20,7 @@ shinyServer(function(input, output) {
   })
   
   output$plot <- renderPlot({
-    #Vérification si des fichiers de données on été rentrés
+    #Vérification si des fichiers de données ont été rentrés
     if(!is.null(input$file1) && !is.null(input$file2))
     {
       #Rangement des valeurs dans des tableaux
