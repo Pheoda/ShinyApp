@@ -16,8 +16,11 @@ shinyServer(function(input, output) {
     {
       x <- c(as.matrix(read.csv(input$file1$datapath)));
       y <- c(as.matrix(read.csv(input$file2$datapath)));
-      plot(x, rank(x)/length(x), main = "Rendu des échantillons", xlab = "X", ylab = "Y",type = "p");
-      points(y, rank(y)/length(y), col="red");
+      x <- sort(x);
+      y <- sort(y);
+      abscisse <- c(1:length(x));
+      plot(abscisse, x, main = "Rendu des échantillons", xlab = "X", ylab = "Y", type = "p");
+      points(abscisse, y, col="red");
     }
   })
   
