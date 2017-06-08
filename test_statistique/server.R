@@ -42,7 +42,7 @@ shinyServer(function(input, output) {
   
   
   ######
-  ### Test de Kolmogorov Smirnov
+  ### Test de Kolmogorov-Smirnov
   ######
   
   output$p_valueKS <- renderText({

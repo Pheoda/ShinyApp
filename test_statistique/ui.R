@@ -18,7 +18,7 @@ shinyUI(fluidPage(
     )
   ),
   
-  titlePanel("Test de Kolmogorov Smirnov"),
+  titlePanel("Test de Kolmogorov-Smirnov"),
   
   # Entrée des 2 fichiers sources
   sidebarLayout(
