@@ -13,8 +13,8 @@ shinyUI(fluidPage(
 
     # Affichage du rendu
     mainPanel(
-      textOutput("p_value"),
-      plotOutput("plot")
+      textOutput("p_value"), #Affichage du texte de la p-value
+      plotOutput("plot")     #Affichage du graphique
     )
   )
 ))
